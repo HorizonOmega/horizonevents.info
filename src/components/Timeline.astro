@@ -1,9 +1,14 @@
 ---
 export interface Event {
+  id?: string;
+  series?: string;
   date: string;
   name: string;
   speakers?: string[];
   links?: Record<string, string>;
+  participants?: number;
+  affiliations?: string[];
+  summary?: string;
   [key: string]: any;
 }
 

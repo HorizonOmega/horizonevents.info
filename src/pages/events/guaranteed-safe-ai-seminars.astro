@@ -4,7 +4,7 @@ import Section from '@/components/Section.astro';
 import Timeline from '@/components/Timeline.astro';
 import events from '@/data/events.json';
 
-const gsaiEvents = events.filter(e => e.series === 'GS-AI').sort((a, b) => b.date.localeCompare(a.date));
+const gsaiEvents = events.filter(e => e.series === 'GS-AI').sort((a, b) => b.date.localeCompare(a.date)) as any;
 ---
 
 <Layout 
