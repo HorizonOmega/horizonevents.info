@@ -29,16 +29,20 @@ Modern, performant website for Horizon Events built with Astro, Tailwind CSS, an
 
 ## 🌐 Deployment
 
-### Cloudflare Pages
+### GitHub Pages
 
-1. Push your code to a git repository (GitHub, GitLab, etc.)
-2. Log in to the Cloudflare dashboard
-3. Go to Pages and create a new project
-4. Connect your git repository
-5. Use these build settings:
-   - Build command: `npm run build`
-   - Build output directory: `dist`
-   - Node version: 20
+1. Push your code to the main branch
+2. Go to Settings → Pages in your GitHub repository
+3. Under "Build and deployment":
+   - Source: GitHub Actions
+4. The site will automatically deploy on push to main
+5. Access your site at: https://HorizonOmega.github.io/horizonevents.info
+
+### Custom Domain (Optional)
+
+1. Add a CNAME file with your domain in the public folder
+2. Configure DNS settings to point to GitHub Pages
+3. Enable HTTPS in repository settings
 
 ### Environment Variables
 

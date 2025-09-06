@@ -12,6 +12,7 @@ const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
 export default defineConfig({
   site: 'https://horizonevents.info',
+  // base: '/horizonevents.info', // Only needed if using github.io subdirectory
   vite: {
     resolve: {
       alias: {
