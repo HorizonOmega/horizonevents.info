@@ -5,7 +5,9 @@
     "name": "Using PDDL Planning to Ensure Safety in LLM-based Agents",
     "date": "2025-01",
     "speakers": ["Agustín Martinez Suñé"],
-    "links": {},
+    "links": {
+      "event": "https://lu.ma/08gr7mrs"
+    },
     "summary": ""
   },
   {
@@ -14,7 +16,9 @@
     "name": "Compact Proofs of Model Performance via Mechanistic Interpretability",
     "date": "2024-12",
     "speakers": ["Louis Jaburi"],
-    "links": {},
+    "links": {
+      "event": "https://lu.ma/g24bvacw"
+    },
     "summary": ""
   },
   {
@@ -23,7 +27,9 @@
     "name": "Bayesian oracles and safety bounds",
     "date": "2024-11",
     "speakers": ["Yoshua Bengio"],
-    "links": {},
+    "links": {
+      "event": "https://lu.ma/4ylbvs75"
+    },
     "summary": ""
   },
   {
@@ -32,7 +38,9 @@
     "name": "Constructability: Designing plain-coded AI systems",
     "date": "2024-08",
     "speakers": ["Charbel-Raphaël Ségerie", "Épiphanie Gédéon"],
-    "links": {},
+    "links": {
+      "event": "https://lu.ma/xpf046sa"
+    },
     "summary": ""
   },
   {
@@ -41,7 +49,9 @@
     "name": "Proving safety for narrow AI outputs",
     "date": "2024-07",
     "speakers": ["Evan Miyazono"],
-    "links": {},
+    "links": {
+      "event": "https://lu.ma/2715xmzn"
+    },
     "summary": ""
   },
   {
@@ -50,7 +60,9 @@
     "name": "Gaia: Distributed planetary-scale AI safety",
     "date": "2024-06",
     "speakers": ["Rafael Kaufmann"],
-    "links": {},
+    "links": {
+      "event": "https://lu.ma/qn8p4wp4"
+    },
     "summary": ""
   },
   {
@@ -59,7 +71,9 @@
     "name": "Provable AI safety",
     "date": "2024-05",
     "speakers": ["Steve Omohundro"],
-    "links": {},
+    "links": {
+      "event": "https://lu.ma/3fz12am7"
+    },
     "summary": ""
   },
   {
@@ -68,7 +82,9 @@
     "name": "Synthesizing Gatekeepers for Safe Reinforcement Learning & Verifying Global Properties of Neural Networks",
     "date": "2024-04",
     "speakers": ["Justice Sefas", "Roman Soletskyi"],
-    "links": {},
+    "links": {
+      "event": "https://lu.ma/provableaisafety"
+    },
     "summary": ""
   },
   {
@@ -79,7 +95,7 @@
     "participants": 85,
     "affiliations": ["OpenAI", "DeepMind", "Cambridge", "MIRI", "Mila", "Cornell", "Anthropic", "MIT", "Columbia", "Stanford", "U Toronto", "Waterloo", "Cooperative AI"],
     "links": {
-      "archive": "#"
+      "archive": "https://www.lesswrong.com/posts/QKdcHjoAfPJrZuFJk/ai-safety-unconference-neurips-2022"
     }
   },
   {
@@ -90,7 +106,7 @@
     "participants": 50,
     "affiliations": ["OpenAI", "DeepMind", "Cambridge", "MIRI", "Mila"],
     "links": {
-      "archive": "#"
+      "archive": "https://web.archive.org/web/20210131071209/https://aisafetyunconference.info/"
     }
   },
   {
@@ -102,7 +118,7 @@
     "affiliations": ["UC Berkeley", "Vector Institute", "Mila", "OpenAI", "DeepMind", "Oxford", "CHAI", "Mcgill", "NYU", "Partnership on AI"],
     "speakers": ["Adam Gleave", "Jan Leike", "David Krueger", "Dan Hendrycks", "Aaron Tucker", "Victoria Krakovna"],
     "links": {
-      "archive": "#"
+      "archive": "https://web.archive.org/web/20181202025728/https://aisafetyunconference.info/"
     }
   }
 ]
