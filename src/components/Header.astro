@@ -2,7 +2,6 @@
 import { Icon } from 'astro-icon/components';
 
 const navItems = [
-  { label: 'Home', href: '/' },
   { 
     label: 'Events', 
     href: '/events',
@@ -12,9 +11,8 @@ const navItems = [
       { label: 'AI Safety Unconference', href: '/events/ai-safety-unconference' }
     ]
   },
-  { label: 'Team', href: '/team' },
-  { label: 'Blog', href: '/blog' },
-  { label: 'Videos', href: '/videos' },
+  { label: 'Blog', href: 'https://horizonomega.substack.com/', external: true },
+  { label: 'Videos', href: 'https://www.youtube.com/@HorizonEvents_', external: true },
   { label: 'Acknowledgements', href: '/acknowledgements' }
 ];
 ---
@@ -48,7 +46,12 @@ const navItems = [
               </div>
             </div>
           ) : (
-            <a href={item.href} class="text-slate-200 hover:text-orange-400 transition-colors">
+            <a 
+              href={item.href} 
+              class="text-slate-200 hover:text-orange-400 transition-colors"
+              target={item.external ? '_blank' : undefined}
+              rel={item.external ? 'noopener noreferrer' : undefined}
+            >
               {item.label}
             </a>
           )
@@ -92,7 +95,12 @@ const navItems = [
               ))}
             </div>
           ) : (
-            <a href={item.href} class="text-slate-200 hover:text-orange-400 transition-colors">
+            <a 
+              href={item.href} 
+              class="text-slate-200 hover:text-orange-400 transition-colors"
+              target={item.external ? '_blank' : undefined}
+              rel={item.external ? 'noopener noreferrer' : undefined}
+            >
               {item.label}
             </a>
           )
