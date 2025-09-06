@@ -1,4 +1,4 @@
-# Horizon Events - Astro Site
+# horizonevents.info
 
 Modern, performant website for Horizon Events built with Astro, Tailwind CSS, and MDX.
 
