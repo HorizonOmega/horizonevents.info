@@ -1,0 +1,61 @@
+---
+import Layout from '@/layouts/Layout.astro';
+import Section from '@/components/Section.astro';
+
+const events = [
+  {
+    title: 'Guaranteed Safe AI Seminars',
+    description: 'Monthly seminar series bringing together researchers to discuss and advance the field of Guaranteed Safe AI.',
+    link: '/events/guaranteed-safe-ai-seminars',
+    status: 'Ongoing'
+  },
+  {
+    title: 'AI Safety Unconference',
+    description: 'A series of events hosted alongside main AI/ML conferences, fostering connection and understanding between AI safety researchers.',
+    link: '/events/ai-safety-unconference',
+    status: 'Series'
+  }
+];
+---
+
+<Layout 
+  title="Events - Horizon Events"
+  description="Explore our AI safety events including seminars, unconferences, and workshops."
+>
+  <Section>
+    <h1 class="text-4xl md:text-5xl font-bold mb-8 text-white">Events</h1>
+    
+    <p class="text-lg text-gray-300 mb-12 max-w-3xl">
+      Horizon Events organizes and facilitates high-impact gatherings that advance AI safety research and development. 
+      Our events bring together researchers, practitioners, and stakeholders to collaborate on critical challenges.
+    </p>
+    
+    <div class="grid md:grid-cols-2 gap-8">
+      {events.map((event) => (
+        <a 
+          href={event.link}
+          class="block bg-gray-900 rounded-lg p-6 border border-gray-800 hover:border-gray-700 transition-all duration-200"
+        >
+          <div class="flex justify-between items-start mb-3">
+            <h2 class="text-xl font-semibold text-white">{event.title}</h2>
+            <span class="text-xs text-orange-500 uppercase tracking-wider">{event.status}</span>
+          </div>
+          <p class="text-gray-400 text-sm">{event.description}</p>
+          <div class="mt-4 text-orange-500 text-sm font-medium">
+            Learn more →
+          </div>
+        </a>
+      ))}
+    </div>
+    
+    <div class="mt-16 p-6 bg-gray-900 rounded-lg border border-gray-800">
+      <h3 class="text-lg font-semibold text-white mb-3">Past Events</h3>
+      <ul class="space-y-2 text-sm text-gray-400">
+        <li>• ML Safety Social @ NeurIPS 2022</li>
+        <li>• Web3 x AI Risk @ Devconnect</li>
+        <li>• Virtual AI Safety Unconference 2024</li>
+        <li>• AISU @ NeurIPS 2018, 2019, 2022</li>
+      </ul>
+    </div>
+  </Section>
+</Layout>

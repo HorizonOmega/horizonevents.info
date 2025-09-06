@@ -1,0 +1,108 @@
+---
+import Layout from '@/layouts/Layout.astro';
+import Hero from '@/components/Hero.astro';
+import Section from '@/components/Section.astro';
+import ServiceCard from '@/components/ServiceCard.astro';
+import ProjectCard from '@/components/ProjectCard.astro';
+import PartnerGrid from '@/components/PartnerGrid.astro';
+import CollaboratorsGrid from '@/components/CollaboratorsGrid.astro';
+import Testimonial from '@/components/Testimonial.astro';
+
+const services = [
+  {
+    title: "Event Planning and Management",
+    description: "From concept to execution, our team of experienced event professionals will handle every aspect of your event. We specialize in creating engaging, impactful experiences that foster collaboration and drive progress. Whether you're planning a conference, workshop, or seminar, we'll work closely with you to bring your vision to life."
+  },
+  {
+    title: "Event Consulting and Strategy",
+    description: "Leverage our extensive expertise to optimize your events for maximum impact. Our team will provide strategic guidance and practical advice on event design, content curation, audience engagement, and more. We'll work with you to develop a comprehensive event strategy that aligns with your goals and objectives."
+  },
+  {
+    title: "Event Resources and Knowledge Base",
+    description: "Access our extensive knowledge base of event best practices, methodologies, and resources. Our expert-curated content includes guides, templates, and case studies to help you plan and execute successful events. Benefit from our constantly updated resources and stay at the forefront of event innovation."
+  }
+];
+
+const projects = [
+  {
+    title: "AISU@conf series",
+    description: "The AI Safety Unconference (AISU) is series since 2018, organized as side events to AI conferences, bringing together researchers, practitioners, and stakeholders from across the community. These dynamic, participant-driven events foster collaboration, knowledge-sharing, and innovation in a unique, highly engaging format.",
+    link: "/events/ai-safety-unconference"
+  },
+  {
+    title: "Web3 x AI risk @ Devconnect",
+    description: "Our Web3 x AI Risk event at Devconnect brought together experts from the fields of blockchain, decentralized technologies, and AI safety to examine the intersection of these cutting-edge domains and discuss strategies for mitigating potential risks and ensuring responsible development."
+  },
+  {
+    title: "AI Safety Events and Training",
+    description: "Newsletter, web app, and social media presence, to stay informed about the latest AI safety events and related opportunities worldwide."
+  },
+  {
+    title: "ML Safety Social @ NeurIPS 2022",
+    description: "The ML Safety Social at NeurIPS 2022 provided an informal setting for researchers and practitioners to connect, share ideas, and explore collaboration opportunities in the context of the largest annual gathering of the machine learning community."
+  }
+];
+---
+
+<Layout>
+  <Hero />
+  
+  <!-- Mission & Vision -->
+  <Section class="bg-gray-900 border-t border-gray-800">
+    <div class="grid md:grid-cols-2 gap-12">
+      <div>
+        <h2 class="text-3xl font-bold mb-4 text-white">Mission</h2>
+        <p class="text-lg leading-relaxed">
+          An events consultancy dedicated to advancing research and development in AI safety. We specialize in organizing high-impact events, offering event management services to research groups, maintaining an AI Safety Events Tracker, and more.
+        </p>
+      </div>
+      
+      <div>
+        <h2 class="text-3xl font-bold mb-4 text-white">Vision</h2>
+        <p class="text-lg leading-relaxed">
+          Events are an important aspect of accelerating AI safety R&D by enabling connection, collaboration, and action. By improving the quality and quantity of events, Horizon Events aims to be a global catalyst for progress.
+        </p>
+      </div>
+    </div>
+  </Section>
+  
+  <!-- Services -->
+  <Section class="bg-black border-t border-gray-900">
+    <h2 class="text-4xl font-bold text-center mb-12 gradient-text">Services</h2>
+    <div class="grid md:grid-cols-3 gap-8">
+      {services.map((service) => (
+        <ServiceCard title={service.title} description={service.description} />
+      ))}
+    </div>
+  </Section>
+  
+  <!-- Projects -->
+  <Section class="bg-gray-950">
+    <h2 class="text-4xl font-bold text-center mb-12 gradient-text">Projects</h2>
+    <div class="grid md:grid-cols-2 gap-8">
+      {projects.map((project) => (
+        <ProjectCard {...project} />
+      ))}
+    </div>
+  </Section>
+  
+  <!-- Clients and Partners -->
+  <Section class="bg-gray-900">
+    <h2 class="text-4xl font-bold text-center mb-12 gradient-text">Clients and partners</h2>
+    <PartnerGrid />
+  </Section>
+  
+  <!-- Testimonial -->
+  <Section class="bg-black border-t border-gray-900">
+    <Testimonial 
+      quote="The event was a great place to meet others with shared research interests. I particularly enjoyed the small discussion groups that exposed me to new perspectives."
+      author="Adam Gleave on AISU @ NeurIPS 2018"
+    />
+  </Section>
+  
+  <!-- Collaborators -->
+  <Section class="bg-gray-950">
+    <h2 class="text-4xl font-bold text-center mb-12 gradient-text">Collaborators</h2>
+    <CollaboratorsGrid />
+  </Section>
+</Layout>

@@ -1,0 +1,124 @@
+---
+import { Icon } from 'astro-icon/components';
+
+const navItems = [
+  { label: 'Home', href: '/' },
+  { 
+    label: 'Events', 
+    href: '/events',
+    dropdown: [
+      { label: 'All Events', href: '/events' },
+      { label: 'Guaranteed Safe AI Seminars', href: '/events/guaranteed-safe-ai-seminars' },
+      { label: 'AI Safety Unconference', href: '/events/ai-safety-unconference' }
+    ]
+  },
+  { label: 'Team', href: '/team' },
+  { label: 'Blog', href: '/blog' },
+  { label: 'Videos', href: '/videos' },
+  { label: 'Acknowledgements', href: '/acknowledgements' }
+];
+---
+
+<header class="sticky top-0 z-50 bg-black border-b border-white/10">
+  <nav class="max-width-container px-6 py-4">
+    <div class="flex items-center justify-between">
+      <!-- Logo -->
+      <a href="/" class="text-xl font-semibold text-white hover:text-orange-400 transition-colors">
+        Horizon Events
+      </a>
+      
+      <!-- Desktop Navigation -->
+      <div class="hidden md:flex items-center gap-8">
+        {navItems.map((item) => (
+          item.dropdown ? (
+            <div class="relative group">
+              <button class="flex items-center gap-1 text-slate-200 hover:text-orange-400 transition-colors">
+                {item.label}
+                <Icon name="lucide:chevron-down" class="w-4 h-4" />
+              </button>
+              <div class="absolute top-full left-0 mt-2 w-64 bg-black/95 backdrop-blur-md border border-white/10 rounded-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
+                {item.dropdown.map((subItem) => (
+                  <a 
+                    href={subItem.href}
+                    class="block px-4 py-3 text-sm text-slate-200 hover:text-orange-400 hover:bg-white/5 transition-colors first:rounded-t-lg last:rounded-b-lg"
+                  >
+                    {subItem.label}
+                  </a>
+                ))}
+              </div>
+            </div>
+          ) : (
+            <a href={item.href} class="text-slate-200 hover:text-orange-400 transition-colors">
+              {item.label}
+            </a>
+          )
+        ))}
+        
+        <!-- Contact CTA -->
+        <a 
+          href="mailto:team@horizonevents.info"
+          class="px-4 py-2 text-orange-500 border border-orange-500 hover:bg-orange-500 hover:text-white transition-all duration-200 text-sm font-medium"
+        >
+          Contact Us
+        </a>
+      </div>
+      
+      <!-- Mobile Menu Button -->
+      <button 
+        id="mobile-menu-button"
+        class="md:hidden text-white p-2"
+        aria-label="Toggle menu"
+        aria-expanded="false"
+      >
+        <Icon name="lucide:menu" class="w-6 h-6" id="menu-icon" />
+        <Icon name="lucide:x" class="w-6 h-6 hidden" id="close-icon" />
+      </button>
+    </div>
+    
+    <!-- Mobile Navigation -->
+    <div id="mobile-menu" class="md:hidden hidden pt-4">
+      <div class="flex flex-col gap-4">
+        {navItems.map((item) => (
+          item.dropdown ? (
+            <div>
+              <div class="text-slate-400 text-sm mb-2">{item.label}</div>
+              {item.dropdown.map((subItem) => (
+                <a 
+                  href={subItem.href}
+                  class="block pl-4 py-2 text-slate-200 hover:text-orange-400 transition-colors"
+                >
+                  {subItem.label}
+                </a>
+              ))}
+            </div>
+          ) : (
+            <a href={item.href} class="text-slate-200 hover:text-orange-400 transition-colors">
+              {item.label}
+            </a>
+          )
+        ))}
+        
+        <a 
+          href="mailto:team@horizonevents.info"
+          class="inline-block px-4 py-2 bg-orange-500 text-white rounded-lg hover:bg-orange-600 transition-colors font-medium text-center mt-2"
+        >
+          Contact Us
+        </a>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<script>
+  const button = document.getElementById('mobile-menu-button');
+  const menu = document.getElementById('mobile-menu');
+  const menuIcon = document.getElementById('menu-icon');
+  const closeIcon = document.getElementById('close-icon');
+  
+  button?.addEventListener('click', () => {
+    const isOpen = menu?.classList.toggle('hidden');
+    menuIcon?.classList.toggle('hidden');
+    closeIcon?.classList.toggle('hidden');
+    button?.setAttribute('aria-expanded', (!isOpen).toString());
+  });
+</script>

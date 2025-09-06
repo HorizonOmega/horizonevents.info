@@ -1,0 +1,56 @@
+---
+import { Icon } from 'astro-icon/components';
+
+const currentYear = new Date().getFullYear();
+---
+
+<footer class="bg-gray-900 border-t border-gray-800 mt-20">
+  <div class="max-width-container section-padding">
+    <div class="grid md:grid-cols-2 gap-8 mb-8">
+      <div>
+        <h3 class="text-2xl font-semibold text-white mb-3">Horizon Events</h3>
+        <p class="text-white/90">Facilitating progress in AI safety R&D</p>
+      </div>
+      
+      <div class="flex flex-col gap-3">
+        <a 
+          href="mailto:team@horizonevents.info"
+          class="flex items-center gap-2 text-white hover:text-white/80 transition-colors"
+        >
+          <Icon name="lucide:mail" class="w-5 h-5" />
+          team@horizonevents.info
+        </a>
+        
+        <a 
+          href="https://bsky.app/profile/horizonevents.info"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="flex items-center gap-2 text-white hover:text-white/80 transition-colors"
+        >
+          <Icon name="mdi:butterfly" class="w-5 h-5" />
+          @horizonevents.info
+        </a>
+      </div>
+    </div>
+    
+    <div class="border-t border-white/20 pt-8">
+      <div class="flex flex-col md:flex-row justify-between items-center gap-4">
+        <div class="text-white/80 text-sm text-center md:text-left">
+          <p class="mb-2">
+            Horizon Events is a project of HΩ, a tax-exempt non-profit in Canada (15845360).
+          </p>
+          <p>© {currentYear} HΩ</p>
+        </div>
+        
+        <div class="flex gap-6 text-sm">
+          <a href="/privacy" class="text-white/80 hover:text-white transition-colors">
+            Privacy policy
+          </a>
+          <a href="/data-security" class="text-white/80 hover:text-white transition-colors">
+            Data security policy
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>

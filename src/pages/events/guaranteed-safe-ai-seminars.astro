@@ -1,0 +1,87 @@
+---
+import Layout from '@/layouts/Layout.astro';
+import Section from '@/components/Section.astro';
+import Timeline from '@/components/Timeline.astro';
+import events from '@/data/events.json';
+
+const gsaiEvents = events.filter(e => e.series === 'GS-AI').sort((a, b) => b.date.localeCompare(a.date));
+---
+
+<Layout 
+  title="Guaranteed Safe AI Seminars - Horizon Events"
+  description="Monthly seminar series on Guaranteed Safe AI bringing together researchers to discuss and advance the field."
+>
+  <Section>
+    <h1 class="text-4xl md:text-5xl font-bold mb-8 text-white">Guaranteed Safe AI Seminars</h1>
+    
+    <div class="prose prose-invert max-w-none mb-12">
+      <p class="text-lg leading-relaxed mb-6">
+        The monthly seminar series on Guaranteed Safe AI brings together researchers to discuss and advance the field of Guaranteed Safe AI. 
+        For further context, we recommend reading the <a href="#" class="text-orange-400 hover:text-orange-300 underline">Towards Guaranteed Safe AI</a> paper.
+      </p>
+      
+      <div class="grid sm:grid-cols-2 gap-4 my-8">
+        <a 
+          href="https://lu.ma/guaranteedsafeaiseminars"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="flex items-center gap-3 bg-white/5 rounded-lg p-4 hover:bg-white/10 transition-colors"
+        >
+          <span class="text-lg">📅</span>
+          <div>
+            <div class="font-semibold text-white">Join</div>
+            <div class="text-sm text-slate-400">lu.ma/guaranteedsafeaiseminars</div>
+          </div>
+        </a>
+        
+        <a 
+          href="#"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="flex items-center gap-3 bg-white/5 rounded-lg p-4 hover:bg-white/10 transition-colors"
+        >
+          <span class="text-lg">🎤</span>
+          <div>
+            <div class="font-semibold text-white">Apply to speak</div>
+            <div class="text-sm text-slate-400">Fill this form</div>
+          </div>
+        </a>
+        
+        <a 
+          href="#"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="flex items-center gap-3 bg-white/5 rounded-lg p-4 hover:bg-white/10 transition-colors"
+        >
+          <span class="text-lg">🎥</span>
+          <div>
+            <div class="font-semibold text-white">Recordings</div>
+            <div class="text-sm text-slate-400">Watch playlist</div>
+          </div>
+        </a>
+        
+        <a 
+          href="#"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="flex items-center gap-3 bg-white/5 rounded-lg p-4 hover:bg-white/10 transition-colors"
+        >
+          <span class="text-lg">💬</span>
+          <div>
+            <div class="font-semibold text-white">Feedback</div>
+            <div class="text-sm text-slate-400">Share your thoughts</div>
+          </div>
+        </a>
+      </div>
+      
+      <p class="text-sm text-slate-400 italic">
+        Thanks to Long-Term Future Fund for supporting the project for a 6 months duration in 2024.
+      </p>
+    </div>
+    
+    <div class="mt-16">
+      <h2 class="text-3xl font-bold mb-8 text-white">Past events</h2>
+      <Timeline events={gsaiEvents} />
+    </div>
+  </Section>
+</Layout>

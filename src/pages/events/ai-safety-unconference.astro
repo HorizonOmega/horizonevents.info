@@ -1,0 +1,131 @@
+---
+import Layout from '@/layouts/Layout.astro';
+import Section from '@/components/Section.astro';
+import Accordion from '@/components/Accordion.astro';
+
+const aisu2022 = {
+  talks: [
+    "Haydn Belfield: What standard-setting in EU + US might mean for AI safety",
+    "Esben Kran: Hackathons in AI safety research",
+    "Franziska Boenisch: Privacy attacks against federated learning",
+    "Aaron Tucker: Bandits with Costly Reward Observations",
+    "Lewis Hammond: Cooperative AI",
+    "Adam Dziedzic: Stealing and defending self-supervised models",
+    "David Lindner: Active Learning for Reward Modelling",
+    "Lauro Langosco di Langosco: An empirical demonstration of deceptive alignment",
+    "Zhijing Jin: Causally aligning language models"
+  ],
+  discussions: [
+    "Haydn Belfield: AI governance",
+    "Adam Dziedzic: Is this model mine? On stealing and defending machine learning models",
+    "Lewis Hammond: Cooperative AI",
+    "Lauro Langosco di Langosco: Deceptive alignment"
+  ],
+  testimonials: [
+    { quote: "This was a fascinating event that was helpful for keeping up with the cutting edge of the field, and for launching collaborations.", author: "Haydn Belfield" },
+    { quote: "The AI safety unconference was very useful to meet and talk with the AI safety researchers at NeurIPS.", author: "Esben Kran" },
+    { quote: "It was very reassuring to hear that diverse perspectives on AI risk are being studied seriously, including criticism of the AI safety community.", author: "Arvind Raghavan" }
+  ]
+};
+
+const aisu2018 = {
+  speakers: ["Adam Gleave", "Jan Leike", "David Krueger", "Dan Hendrycks", "Aaron Tucker", "Victoria Krakovna"],
+  testimonials: [
+    { quote: "A great way to meet the best people in the area and propel daring ideas forward.", author: "Stuart Armstrong" },
+    { quote: "The event was a great place to meet others with shared research interests. I particularly enjoyed the small discussion groups that exposed me to new perspectives.", author: "Adam Gleave" }
+  ]
+};
+---
+
+<Layout 
+  title="AI Safety Unconference @ conf - Horizon Events"
+  description="A series of events hosted alongside main AI/ML conferences, fostering connection and understanding between AI safety researchers."
+>
+  <Section>
+    <h1 class="text-4xl md:text-5xl font-bold mb-8 text-white">AI Safety Unconference @ conf</h1>
+    
+    <div class="prose prose-invert max-w-none mb-12">
+      <p class="text-lg leading-relaxed">
+        The purpose of the AI Safety Unconference is to foster connection and shared understanding between researchers interested in AI safety. 
+        It is a series of events, hosted alongside main AI/ML conferences. It welcomes both newly interested and established researchers. 
+        It features talks, moderated discussions, one-on-ones, free-form interactions, and participant-driven activities.
+      </p>
+    </div>
+    
+    <!-- AISU 2022 -->
+    <div class="mb-16">
+      <h2 class="text-3xl font-bold mb-6 text-white">AISU @ NeurIPS 2022</h2>
+      
+      <p class="text-slate-300 mb-6">
+        ~85 participants, independents and from various affiliations: OpenAI, DeepMind, Cambridge, MIRI, Mila, Cornell, Anthropic, MIT, Columbia, Stanford, U Toronto, Waterloo, Cooperative AI, ...
+      </p>
+      
+      <Accordion title="Lightning talks" items={aisu2022.talks} />
+      
+      <Accordion title="Facilitated discussions (1h each)" items={aisu2022.discussions} />
+      
+      <div class="mt-8">
+        <h3 class="text-xl font-semibold mb-4 text-white">Testimonials</h3>
+        <div class="space-y-4">
+          {aisu2022.testimonials.map((t) => (
+            <blockquote class="border-l-4 border-orange-500 pl-4 py-2">
+              <p class="italic text-slate-300 mb-2">"{t.quote}"</p>
+              <cite class="text-sm text-slate-400">— {t.author}</cite>
+            </blockquote>
+          ))}
+        </div>
+      </div>
+      
+      <a href="#" class="inline-block mt-4 text-orange-400 hover:text-orange-300 underline">
+        Archived website
+      </a>
+    </div>
+    
+    <!-- AISU 2019 -->
+    <div class="mb-16">
+      <h2 class="text-3xl font-bold mb-6 text-white">AISU @ NeurIPS 2019</h2>
+      
+      <p class="text-slate-300 mb-6">
+        ~50 participants, independents and from various affiliations: OpenAI, DeepMind, Cambridge, MIRI, Mila, ...
+      </p>
+      
+      <p class="text-slate-300 mb-4">
+        Participant-driven discussions, multiple lighting talks, ...
+      </p>
+      
+      <a href="#" class="inline-block mt-4 text-orange-400 hover:text-orange-300 underline">
+        Archived website
+      </a>
+    </div>
+    
+    <!-- AISU 2018 -->
+    <div class="mb-16">
+      <h2 class="text-3xl font-bold mb-6 text-white">AISU @ NeurIPS 2018</h2>
+      
+      <p class="text-slate-300 mb-6">
+        ~50 participants from various affiliations: UC Berkeley, Vector Institute, Mila, OpenAI, DeepMind, Oxford, CHAI, Mcgill, NYU, Partnership on AI, etc
+      </p>
+      
+      <div class="mb-6">
+        <h3 class="text-xl font-semibold mb-3 text-white">Talks from:</h3>
+        <p class="text-slate-300">{aisu2018.speakers.join(', ')}</p>
+      </div>
+      
+      <div class="mt-8">
+        <h3 class="text-xl font-semibold mb-4 text-white">Testimonials</h3>
+        <div class="space-y-4">
+          {aisu2018.testimonials.map((t) => (
+            <blockquote class="border-l-4 border-orange-500 pl-4 py-2">
+              <p class="italic text-slate-300 mb-2">"{t.quote}"</p>
+              <cite class="text-sm text-slate-400">— {t.author}</cite>
+            </blockquote>
+          ))}
+        </div>
+      </div>
+      
+      <a href="#" class="inline-block mt-4 text-orange-400 hover:text-orange-300 underline">
+        Archived website
+      </a>
+    </div>
+  </Section>
+</Layout>

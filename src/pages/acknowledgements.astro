@@ -1,0 +1,75 @@
+---
+import Layout from '@/layouts/Layout.astro';
+import Section from '@/components/Section.astro';
+
+const funders = [
+  {
+    name: "The Long-Term Future Fund",
+    contributions: [
+      "Partial funding of AI Safety Unconference 2018 and 2019",
+      "Guaranteed Safe AI Seminars for 6 months in 2024",
+      "Virtual AI Safety Unconference 2024"
+    ]
+  },
+  {
+    name: "The Survival and Flourishing Fund",
+    contributions: ["Partially funding the AI Safety Unconference 2019"]
+  },
+  {
+    name: "The Effective Altruism Foundation",
+    contributions: ["Partially funding the AI Safety Unconference 2019"]
+  },
+  {
+    name: "The Future of Life Institute",
+    contributions: ["Partially funding the AI Safety Unconference 2018 and 2019"]
+  }
+];
+---
+
+<Layout 
+  title="Acknowledgements - Horizon Events"
+  description="Thanks to all participants and funders who make our AI safety events possible."
+>
+  <Section>
+    <div class="max-w-4xl mx-auto">
+      <div class="bg-black/60 backdrop-blur-sm rounded-2xl p-8 md:p-12 border border-white/10">
+        <h1 class="text-4xl md:text-5xl font-bold mb-8 text-white">Acknowledgements</h1>
+        
+        <div class="prose prose-invert max-w-none">
+          <p class="text-lg leading-relaxed mb-8">
+            First and foremost, thanks to all the participants to our events over the years.
+          </p>
+          
+          <p class="text-lg leading-relaxed mb-8">
+            You are the ones we are serving and that bring life to the project.
+          </p>
+          
+          <div class="mt-12">
+            <h2 class="text-2xl font-semibold mb-6 text-white">Thanks to all our funders over the years:</h2>
+            
+            <div class="space-y-6">
+              {funders.map((funder) => (
+                <div class="bg-white/5 rounded-lg p-6">
+                  <h3 class="text-lg font-semibold mb-3 text-white">{funder.name}</h3>
+                  <ul class="space-y-2">
+                    {funder.contributions.map((contribution) => (
+                      <li class="text-slate-300 before:content-['•'] before:text-orange-500 before:mr-2">
+                        {contribution}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              ))}
+            </div>
+          </div>
+          
+          <div class="mt-12 p-6 bg-gradient-to-r from-orange-500/20 to-purple-500/20 rounded-lg border border-white/10">
+            <p class="text-lg italic text-white">
+              Interested in supporting Horizon Events? Visit our <a href="#" class="text-orange-400 hover:text-orange-300 underline">donation page</a>.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </Section>
+</Layout>

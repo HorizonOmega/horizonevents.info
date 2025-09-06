@@ -1,0 +1,22 @@
+---
+export interface Props {
+  title: string;
+  description: string;
+  link?: string;
+}
+
+const { title, description, link } = Astro.props;
+---
+
+<div class="bg-black/40 backdrop-blur-sm rounded-2xl p-8 border border-white/10 card-hover">
+  <h3 class="text-xl font-semibold mb-4 text-white">{title}</h3>
+  <p class="text-slate-300 leading-relaxed mb-4">{description}</p>
+  {link && (
+    <a 
+      href={link}
+      class="inline-flex items-center text-orange-400 hover:text-orange-300 transition-colors font-medium"
+    >
+      Learn more →
+    </a>
+  )}
+</div>

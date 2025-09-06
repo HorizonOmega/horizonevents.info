@@ -1,0 +1,38 @@
+[
+  {
+    "name": "Orpheus Lummis",
+    "role": "Founder",
+    "photo": "/images/orpheus.jpg",
+    "url": "https://orpheuslummis.info"
+  },
+  {
+    "name": "Diego Jiménez",
+    "role": "AI strategist and events ops",
+    "photo": "/images/diego.jpg", 
+    "url": "#"
+  },
+  {
+    "name": "Arjun Yadav",
+    "role": "Generalist and events",
+    "photo": "/images/arjun.jpg",
+    "url": "#"
+  },
+  {
+    "name": "Linda Linsefors",
+    "role": "Advisor, events and AI safety",
+    "photo": "/images/linda.jpg",
+    "url": "#"
+  },
+  {
+    "name": "Pascal Huynh", 
+    "role": "Event and interaction design",
+    "photo": "/images/pascal.jpg",
+    "url": "#"
+  },
+  {
+    "name": "Nicolas Grenier",
+    "role": "Advisor, worlding",
+    "photo": "/images/nicolas.jpg",
+    "url": "#"
+  }
+]

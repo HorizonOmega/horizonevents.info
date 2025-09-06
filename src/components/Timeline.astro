@@ -1,0 +1,47 @@
+---
+export interface Event {
+  date: string;
+  name: string;
+  speakers?: string[];
+  links?: Record<string, string>;
+  [key: string]: any;
+}
+
+export interface Props {
+  events: Event[];
+}
+
+const { events } = Astro.props;
+---
+
+<div class="space-y-6">
+  {events.map((event) => (
+    <div class="relative pl-8 pb-6 border-l-2 border-orange-500/30 last:border-0">
+      <div class="absolute -left-[9px] top-0 w-4 h-4 bg-orange-500 rounded-full"></div>
+      
+      <div class="text-sm text-slate-400 mb-1">{event.date}</div>
+      <h3 class="text-lg font-semibold text-white mb-2">{event.name}</h3>
+      
+      {event.speakers && event.speakers.length > 0 && (
+        <div class="text-slate-300 mb-2">
+          {event.speakers.join(', ')}
+        </div>
+      )}
+      
+      {event.links && Object.keys(event.links).length > 0 && (
+        <div class="flex gap-3 text-sm">
+          {Object.entries(event.links).map(([label, url]) => (
+            <a 
+              href={url}
+              target="_blank"
+              rel="noopener noreferrer"
+              class="text-orange-400 hover:text-orange-300 underline transition-colors"
+            >
+              {label}
+            </a>
+          ))}
+        </div>
+      )}
+    </div>
+  ))}
+</div>

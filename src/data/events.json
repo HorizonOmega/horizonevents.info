@@ -1,0 +1,108 @@
+[
+  {
+    "id": "gsai-2025-01",
+    "series": "GS-AI",
+    "name": "Using PDDL Planning to Ensure Safety in LLM-based Agents",
+    "date": "2025-01",
+    "speakers": ["Agustín Martinez Suñé"],
+    "links": {},
+    "summary": ""
+  },
+  {
+    "id": "gsai-2024-12",
+    "series": "GS-AI",
+    "name": "Compact Proofs of Model Performance via Mechanistic Interpretability",
+    "date": "2024-12",
+    "speakers": ["Louis Jaburi"],
+    "links": {},
+    "summary": ""
+  },
+  {
+    "id": "gsai-2024-11",
+    "series": "GS-AI",
+    "name": "Bayesian oracles and safety bounds",
+    "date": "2024-11",
+    "speakers": ["Yoshua Bengio"],
+    "links": {},
+    "summary": ""
+  },
+  {
+    "id": "gsai-2024-08",
+    "series": "GS-AI",
+    "name": "Constructability: Designing plain-coded AI systems",
+    "date": "2024-08",
+    "speakers": ["Charbel-Raphaël Ségerie", "Épiphanie Gédéon"],
+    "links": {},
+    "summary": ""
+  },
+  {
+    "id": "gsai-2024-07",
+    "series": "GS-AI",
+    "name": "Proving safety for narrow AI outputs",
+    "date": "2024-07",
+    "speakers": ["Evan Miyazono"],
+    "links": {},
+    "summary": ""
+  },
+  {
+    "id": "gsai-2024-06",
+    "series": "GS-AI",
+    "name": "Gaia: Distributed planetary-scale AI safety",
+    "date": "2024-06",
+    "speakers": ["Rafael Kaufmann"],
+    "links": {},
+    "summary": ""
+  },
+  {
+    "id": "gsai-2024-05",
+    "series": "GS-AI",
+    "name": "Provable AI safety",
+    "date": "2024-05",
+    "speakers": ["Steve Omohundro"],
+    "links": {},
+    "summary": ""
+  },
+  {
+    "id": "gsai-2024-04",
+    "series": "GS-AI",
+    "name": "Synthesizing Gatekeepers for Safe Reinforcement Learning & Verifying Global Properties of Neural Networks",
+    "date": "2024-04",
+    "speakers": ["Justice Sefas", "Roman Soletskyi"],
+    "links": {},
+    "summary": ""
+  },
+  {
+    "id": "aisu-2022",
+    "series": "AISU",
+    "name": "AI Safety Unconference @ NeurIPS 2022",
+    "date": "2022",
+    "participants": 85,
+    "affiliations": ["OpenAI", "DeepMind", "Cambridge", "MIRI", "Mila", "Cornell", "Anthropic", "MIT", "Columbia", "Stanford", "U Toronto", "Waterloo", "Cooperative AI"],
+    "links": {
+      "archive": "#"
+    }
+  },
+  {
+    "id": "aisu-2019",
+    "series": "AISU",
+    "name": "AI Safety Unconference @ NeurIPS 2019",
+    "date": "2019",
+    "participants": 50,
+    "affiliations": ["OpenAI", "DeepMind", "Cambridge", "MIRI", "Mila"],
+    "links": {
+      "archive": "#"
+    }
+  },
+  {
+    "id": "aisu-2018",
+    "series": "AISU",
+    "name": "AI Safety Unconference @ NeurIPS 2018", 
+    "date": "2018",
+    "participants": 50,
+    "affiliations": ["UC Berkeley", "Vector Institute", "Mila", "OpenAI", "DeepMind", "Oxford", "CHAI", "Mcgill", "NYU", "Partnership on AI"],
+    "speakers": ["Adam Gleave", "Jan Leike", "David Krueger", "Dan Hendrycks", "Aaron Tucker", "Victoria Krakovna"],
+    "links": {
+      "archive": "#"
+    }
+  }
+]
