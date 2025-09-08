@@ -3,7 +3,7 @@
     "id": "gsai-2025-01",
     "series": "GS-AI",
     "name": "Using PDDL Planning to Ensure Safety in LLM-based Agents",
-    "date": "2025-01",
+    "date": "2025-01-09",
     "speakers": ["Agustín Martinez Suñé"],
     "links": {
       "event": "https://lu.ma/08gr7mrs"
@@ -14,7 +14,7 @@
     "id": "gsai-2024-12",
     "series": "GS-AI",
     "name": "Compact Proofs of Model Performance via Mechanistic Interpretability",
-    "date": "2024-12",
+    "date": "2024-12-12",
     "speakers": ["Louis Jaburi"],
     "links": {
       "event": "https://lu.ma/g24bvacw"
@@ -25,7 +25,7 @@
     "id": "gsai-2024-11",
     "series": "GS-AI",
     "name": "Bayesian oracles and safety bounds",
-    "date": "2024-11",
+    "date": "2024-11-14",
     "speakers": ["Yoshua Bengio"],
     "links": {
       "event": "https://lu.ma/4ylbvs75"
@@ -36,7 +36,7 @@
     "id": "gsai-2024-08",
     "series": "GS-AI",
     "name": "Constructability: Designing plain-coded AI systems",
-    "date": "2024-08",
+    "date": "2024-08-08",
     "speakers": ["Charbel-Raphaël Ségerie", "Épiphanie Gédéon"],
     "links": {
       "event": "https://lu.ma/xpf046sa"
@@ -44,10 +44,21 @@
     "summary": ""
   },
   {
+    "id": "gsai-2025-07",
+    "series": "GS-AI",
+    "name": "Engineering Rational Cooperative AI via Inverse Planning and Probabilistic Programming",
+    "date": "2025-07-10",
+    "speakers": ["Tan Zhi Xuan"],
+    "links": {
+      "event": "https://lu.ma/yldjxmej"
+    },
+    "summary": ""
+  },
+  {
     "id": "gsai-2024-07",
     "series": "GS-AI",
     "name": "Proving safety for narrow AI outputs",
-    "date": "2024-07",
+    "date": "2024-07-11",
     "speakers": ["Evan Miyazono"],
     "links": {
       "event": "https://lu.ma/2715xmzn"
@@ -58,7 +69,7 @@
     "id": "gsai-2024-06",
     "series": "GS-AI",
     "name": "Gaia: Distributed planetary-scale AI safety",
-    "date": "2024-06",
+    "date": "2024-06-13",
     "speakers": ["Rafael Kaufmann"],
     "links": {
       "event": "https://lu.ma/qn8p4wp4"
@@ -69,7 +80,7 @@
     "id": "gsai-2024-05",
     "series": "GS-AI",
     "name": "Provable AI safety",
-    "date": "2024-05",
+    "date": "2024-05-09",
     "speakers": ["Steve Omohundro"],
     "links": {
       "event": "https://lu.ma/3fz12am7"
@@ -80,7 +91,7 @@
     "id": "gsai-2024-04",
     "series": "GS-AI",
     "name": "Synthesizing Gatekeepers for Safe Reinforcement Learning & Verifying Global Properties of Neural Networks",
-    "date": "2024-04",
+    "date": "2024-04-11",
     "speakers": ["Justice Sefas", "Roman Soletskyi"],
     "links": {
       "event": "https://lu.ma/provableaisafety"

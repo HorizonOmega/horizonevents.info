@@ -9,79 +9,95 @@ const gsaiEvents = events.filter(e => e.series === 'GS-AI').sort((a, b) => b.dat
 
 <Layout 
   title="Guaranteed Safe AI Seminars - Horizon Events"
-  description="Monthly seminar series on Guaranteed Safe AI bringing together researchers to discuss and advance the field."
+  description="Monthly technical seminars advancing high-assurance quantitative safety guarantees for AI systems."
 >
   <Section>
-    <h1 class="text-4xl md:text-5xl font-bold mb-8 text-white">Guaranteed Safe AI Seminars</h1>
-    
-    <div class="prose prose-invert max-w-none mb-12">
-      <p class="text-lg leading-relaxed mb-6">
-        The monthly seminar series on Guaranteed Safe AI brings together researchers to discuss and advance the field of Guaranteed Safe AI. 
-        For further context, we recommend reading the <a href="https://arxiv.org/abs/2405.06624" target="_blank" rel="noopener noreferrer" class="text-orange-400 hover:text-orange-300 underline">Towards Guaranteed Safe AI</a> paper.
-      </p>
-      
-      <div class="grid sm:grid-cols-2 gap-4 my-8">
-        <a 
-          href="https://lu.ma/guaranteedsafeaiseminars"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="flex items-center gap-3 bg-white/5 rounded-lg p-4 hover:bg-white/10 transition-colors"
-        >
-          <span class="text-lg">📅</span>
-          <div>
-            <div class="font-semibold text-white">Join</div>
-            <div class="text-sm text-slate-400">lu.ma/guaranteedsafeaiseminars</div>
-          </div>
-        </a>
-        
-        <a 
-          href="https://airtable.com/appYgVucDqD7WkTyy/pagvLGoo9WCTI9ohk/form"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="flex items-center gap-3 bg-white/5 rounded-lg p-4 hover:bg-white/10 transition-colors"
-        >
-          <span class="text-lg">🎤</span>
-          <div>
-            <div class="font-semibold text-white">Apply to speak</div>
-            <div class="text-sm text-slate-400">Fill this form</div>
-          </div>
-        </a>
-        
-        <a 
-          href="https://www.youtube.com/playlist?list=PLOutnjp2BEJeQM2J49_KvdpuZlaQXPboy"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="flex items-center gap-3 bg-white/5 rounded-lg p-4 hover:bg-white/10 transition-colors"
-        >
-          <span class="text-lg">🎥</span>
-          <div>
-            <div class="font-semibold text-white">Recordings</div>
-            <div class="text-sm text-slate-400">Watch playlist</div>
-          </div>
-        </a>
-        
-        <a 
-          href="https://airtable.com/appYgVucDqD7WkTyy/paghbgReScjYO69Dy/form"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="flex items-center gap-3 bg-white/5 rounded-lg p-4 hover:bg-white/10 transition-colors"
-        >
-          <span class="text-lg">💬</span>
-          <div>
-            <div class="font-semibold text-white">Feedback</div>
-            <div class="text-sm text-slate-400">Share your thoughts</div>
-          </div>
-        </a>
+    <div class="max-w-4xl mx-auto">
+      <!-- Hero -->
+      <div class="mb-8">
+        <h1 class="text-4xl md:text-5xl font-bold mb-2 text-white">Guaranteed Safe AI Seminars</h1>
+        <p class="text-xl text-slate-200 mb-2">Monthly technical seminars advancing high-assurance AI safety</p>
+        <p class="text-base font-medium text-orange-400">Second Thursday monthly • 1:00-2:00 PM ET • Online</p>
+      </div>
+
+      <!-- Key Information -->
+      <div class="grid md:grid-cols-3 gap-4 mb-8">
+        <div class="border border-white/10 rounded-lg p-5">
+          <div class="text-xs uppercase tracking-wider text-slate-400 mb-2">Format</div>
+          <div class="text-white font-medium">30 min talk + 30 min Q&A</div>
+        </div>
+        <div class="border border-white/10 rounded-lg p-5">
+          <div class="text-xs uppercase tracking-wider text-slate-400 mb-2">Audience</div>
+          <div class="text-white font-medium">Technical R&D community</div>
+        </div>
+        <div class="border border-white/10 rounded-lg p-5">
+          <div class="text-xs uppercase tracking-wider text-slate-400 mb-2">Recording</div>
+          <div class="text-white font-medium">All sessions recorded</div>
+        </div>
+      </div>
+
+      <!-- About -->
+      <div class="mb-8">
+        <p class="text-lg leading-relaxed text-slate-200 mb-6">
+          The Guaranteed Safe AI seminars bring together leading researchers to advance AI with quantitative safety guarantees. 
+          For context, see <a href="https://arxiv.org/abs/2405.06624" target="_blank" rel="noopener noreferrer" class="text-orange-400 hover:text-orange-300 underline underline-offset-2">Towards Guaranteed Safe AI</a>.
+        </p>
       </div>
       
-      <p class="text-sm text-slate-400 italic">
-        Thanks to Long-Term Future Fund for supporting the project for a 6 months duration in 2024.
-      </p>
-    </div>
-    
-    <div class="mt-16">
-      <h2 class="text-3xl font-bold mb-8 text-white">Past events</h2>
-      <Timeline events={gsaiEvents} />
+      <!-- Actions -->
+      <div class="space-y-4 mb-10">
+          <a 
+            href="https://lu.ma/guaranteedsafeaiseminars"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="block bg-orange-600 hover:bg-orange-700 text-white font-semibold rounded-lg px-6 py-4 text-center text-lg"
+          >
+            Register for next seminar →
+          </a>
+          
+          <div class="grid sm:grid-cols-3 gap-4">
+            <a 
+              href="https://airtable.com/appYgVucDqD7WkTyy/pagvLGoo9WCTI9ohk/form"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="border border-white/20 hover:bg-white/5 text-white font-medium rounded-lg px-4 py-3 text-center"
+            >
+              Apply to speak
+            </a>
+            
+            <a 
+              href="https://www.youtube.com/playlist?list=PLOutnjp2BEJeQM2J49_KvdpuZlaQXPboy"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="border border-white/20 hover:bg-white/5 text-white font-medium rounded-lg px-4 py-3 text-center"
+            >
+              Watch recordings
+            </a>
+            
+            <a 
+              href="https://airtable.com/appYgVucDqD7WkTyy/paghbgReScjYO69Dy/form"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="border border-white/20 hover:bg-white/5 text-white font-medium rounded-lg px-4 py-3 text-center"
+            >
+              Give feedback
+            </a>
+          </div>
+        </div>
+      
+      
+      <!-- Past Events -->
+      <div class="mt-10">
+        <h2 class="text-2xl font-bold mb-4 text-white">Past events</h2>
+        <Timeline events={gsaiEvents} />
+      </div>
+      
+      <!-- Acknowledgment -->
+      <div class="mt-12 pt-8 border-t border-white/10">
+        <p class="text-sm text-slate-500">
+          Supported by Long-Term Future Fund (2024)
+        </p>
+      </div>
     </div>
   </Section>
 </Layout>
