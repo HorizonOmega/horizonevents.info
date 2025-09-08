@@ -21,11 +21,11 @@ const { events } = Astro.props;
 
 <div class="space-y-6">
   {events.map((event) => (
-    <div class="relative pl-8 pb-6 border-l-2 border-orange-500/30 last:border-0">
-      <div class="absolute -left-[9px] top-0 w-4 h-4 bg-orange-500 rounded-full"></div>
+    <div class="relative pl-8 pb-6 border-l-2 border-orange-300/20 last:border-0">
+      <div class="absolute -left-[9px] top-0 w-4 h-4 bg-gradient-to-br from-orange-300 to-orange-400 rounded-full shadow-sm"></div>
       
       <div class="text-sm text-slate-400 mb-1">{event.date}</div>
-      <h3 class="text-lg font-semibold text-white mb-2">{event.name}</h3>
+      <h3 class="text-lg font-semibold text-slate-100 mb-2">{event.name}</h3>
       
       {event.speakers && event.speakers.length > 0 && (
         <div class="text-slate-300 mb-2">
@@ -38,7 +38,7 @@ const { events } = Astro.props;
           href={event.links.event}
           target="_blank"
           rel="noopener noreferrer"
-          class="inline-flex items-center gap-1 text-sm text-orange-400 hover:text-orange-300"
+          class="inline-flex items-center gap-1 text-sm text-orange-300 hover:text-orange-200 transition-colors"
         >
           View details
           <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">

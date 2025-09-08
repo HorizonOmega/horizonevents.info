@@ -32,8 +32,8 @@ const funders = [
 >
   <Section>
     <div class="max-w-4xl mx-auto">
-      <div class="bg-black/60 backdrop-blur-sm rounded-2xl p-8 md:p-12 border border-white/10">
-        <h1 class="text-4xl md:text-5xl font-bold mb-8 text-white">Acknowledgements</h1>
+      <div class="bg-slate-800/30 backdrop-blur-sm rounded-2xl p-8 md:p-12 border border-slate-700/30">
+        <h1 class="text-4xl md:text-5xl font-bold mb-8 text-slate-100">Acknowledgements</h1>
         
         <div class="prose prose-invert max-w-none">
           <p class="text-lg leading-relaxed mb-8">
@@ -45,15 +45,15 @@ const funders = [
           </p>
           
           <div class="mt-12">
-            <h2 class="text-2xl font-semibold mb-6 text-white">Thanks to all our funders over the years:</h2>
+            <h2 class="text-2xl font-semibold mb-6 text-slate-100">Thanks to all our funders over the years:</h2>
             
             <div class="space-y-6">
               {funders.map((funder) => (
-                <div class="bg-white/5 rounded-lg p-6">
-                  <h3 class="text-lg font-semibold mb-3 text-white">{funder.name}</h3>
+                <div class="bg-slate-700/20 rounded-xl p-6">
+                  <h3 class="text-lg font-semibold mb-3 text-slate-100">{funder.name}</h3>
                   <ul class="space-y-2">
                     {funder.contributions.map((contribution) => (
-                      <li class="text-slate-300 before:content-['•'] before:text-orange-500 before:mr-2">
+                      <li class="text-slate-300 before:content-['•'] before:text-orange-300 before:mr-2">
                         {contribution}
                       </li>
                     ))}
@@ -63,9 +63,9 @@ const funders = [
             </div>
           </div>
           
-          <div class="mt-12 p-6 bg-gradient-to-r from-orange-500/20 to-purple-500/20 rounded-lg border border-white/10">
-            <p class="text-lg italic text-white">
-              Interested in supporting Horizon Events? Visit our <a href="https://horizonomega.notion.site/Horizon-Events-Donation-733b3b20e7ad4a7c8af8b5a9f5c7afca" target="_blank" rel="noopener noreferrer" class="text-orange-400 hover:text-orange-300 underline">donation page</a>.
+          <div class="mt-12 p-6 bg-gradient-to-r from-orange-300/10 to-purple-400/10 rounded-xl border border-slate-700/30">
+            <p class="text-lg italic text-slate-100">
+              Interested in supporting Horizon Events? Visit our <a href="https://horizonomega.notion.site/Horizon-Events-Donation-733b3b20e7ad4a7c8af8b5a9f5c7afca" target="_blank" rel="noopener noreferrer" class="text-orange-300 hover:text-orange-200 underline">donation page</a>.
             </p>
           </div>
         </div>

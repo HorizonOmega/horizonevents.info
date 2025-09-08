@@ -8,9 +8,9 @@ const { title, items } = Astro.props;
 ---
 
 <details class="group mb-6">
-  <summary class="cursor-pointer bg-white/5 rounded-lg p-4 hover:bg-white/10 transition-colors list-none">
+  <summary class="cursor-pointer bg-slate-700/20 rounded-lg p-4 hover:bg-slate-700/30 transition-colors list-none">
     <div class="flex items-center justify-between">
-      <h3 class="text-lg font-semibold text-white">{title}</h3>
+      <h3 class="text-lg font-semibold text-slate-100">{title}</h3>
       <svg class="w-5 h-5 text-slate-400 transition-transform group-open:rotate-180" fill="none" viewBox="0 0 24 24" stroke="currentColor">
         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
       </svg>
@@ -20,7 +20,7 @@ const { title, items } = Astro.props;
   <div class="mt-4 pl-4">
     <ul class="space-y-2">
       {items.map((item) => (
-        <li class="text-slate-300 before:content-['•'] before:text-orange-500 before:mr-2">
+        <li class="text-slate-300 before:content-['•'] before:text-orange-300 before:mr-2">
           {item}
         </li>
       ))}

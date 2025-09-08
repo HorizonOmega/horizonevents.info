@@ -23,9 +23,9 @@ const events = [
   description="Explore our AI safety events including seminars, unconferences, and workshops."
 >
   <Section>
-    <h1 class="text-4xl md:text-5xl font-bold mb-8 text-white">Events</h1>
+    <h1 class="text-4xl md:text-5xl font-bold mb-8 text-slate-100">Events</h1>
     
-    <p class="text-lg text-gray-300 mb-12 max-w-3xl">
+    <p class="text-lg text-slate-400 mb-12 max-w-3xl">
       Horizon Events organizes and facilitates high-impact gatherings that advance AI safety research and development. 
       Our events bring together researchers, practitioners, and stakeholders to collaborate on critical challenges.
     </p>
@@ -34,23 +34,23 @@ const events = [
       {events.map((event) => (
         <a 
           href={event.link}
-          class="block bg-gray-900 rounded-lg p-6 border border-gray-800 hover:border-gray-700 transition-all duration-200"
+          class="block bg-slate-800/30 rounded-xl p-6 border border-slate-700/30 hover:border-slate-600/40 hover:bg-slate-800/40 transition-all duration-200 backdrop-blur-sm"
         >
           <div class="flex justify-between items-start mb-3">
-            <h2 class="text-xl font-semibold text-white">{event.title}</h2>
-            <span class="text-xs text-orange-500 uppercase tracking-wider">{event.status}</span>
+            <h2 class="text-xl font-semibold text-slate-100">{event.title}</h2>
+            <span class="text-xs text-orange-300 uppercase tracking-wider">{event.status}</span>
           </div>
-          <p class="text-gray-400 text-sm">{event.description}</p>
-          <div class="mt-4 text-orange-500 text-sm font-medium">
+          <p class="text-slate-400 text-sm">{event.description}</p>
+          <div class="mt-4 text-orange-300 text-sm font-medium">
             Learn more →
           </div>
         </a>
       ))}
     </div>
     
-    <div class="mt-16 p-6 bg-gray-900 rounded-lg border border-gray-800">
-      <h3 class="text-lg font-semibold text-white mb-3">Past Events</h3>
-      <ul class="space-y-2 text-sm text-gray-400">
+    <div class="mt-16 p-6 bg-slate-800/30 rounded-xl border border-slate-700/30 backdrop-blur-sm">
+      <h3 class="text-lg font-semibold text-slate-100 mb-3">Past Events</h3>
+      <ul class="space-y-2 text-sm text-slate-400">
         <li>• ML Safety Social @ NeurIPS 2022</li>
         <li>• Web3 x AI Risk @ Devconnect</li>
         <li>• Virtual AI Safety Unconference 2024</li>

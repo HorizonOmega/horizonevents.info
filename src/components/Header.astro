@@ -17,11 +17,11 @@ const navItems = [
 ];
 ---
 
-<header class="sticky top-0 z-50 bg-black border-b border-white/10">
+<header class="sticky top-0 z-50 bg-slate-900/80 backdrop-blur-md border-b border-slate-700/30">
   <nav class="max-width-container px-6 py-4">
     <div class="flex items-center justify-between">
       <!-- Logo -->
-      <a href="/" class="text-xl font-semibold text-white hover:text-orange-400 transition-colors">
+      <a href="/" class="text-xl font-semibold text-slate-100 hover:text-orange-300 transition-colors">
         Horizon Events
       </a>
       
@@ -30,15 +30,15 @@ const navItems = [
         {navItems.map((item) => (
           item.dropdown ? (
             <div class="relative group">
-              <button class="flex items-center gap-1 text-slate-200 hover:text-orange-400 transition-colors">
+              <button class="flex items-center gap-1 text-slate-300 hover:text-orange-300 transition-colors">
                 {item.label}
                 <Icon name="lucide:chevron-down" class="w-4 h-4" />
               </button>
-              <div class="absolute top-full left-0 mt-2 w-64 bg-black/95 backdrop-blur-md border border-white/10 rounded-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
+              <div class="absolute top-full left-0 mt-2 w-64 bg-slate-800/90 backdrop-blur-md border border-slate-700/50 rounded-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 shadow-xl">
                 {item.dropdown.map((subItem) => (
                   <a 
                     href={subItem.href}
-                    class="block px-4 py-3 text-sm text-slate-200 hover:text-orange-400 hover:bg-white/5 transition-colors first:rounded-t-lg last:rounded-b-lg"
+                    class="block px-4 py-3 text-sm text-slate-300 hover:text-orange-300 hover:bg-slate-700/30 transition-colors first:rounded-t-lg last:rounded-b-lg"
                   >
                     {subItem.label}
                   </a>
@@ -48,7 +48,7 @@ const navItems = [
           ) : (
             <a 
               href={item.href} 
-              class="text-slate-200 hover:text-orange-400 transition-colors"
+              class="text-slate-300 hover:text-orange-300 transition-colors"
               target={item.external ? '_blank' : undefined}
               rel={item.external ? 'noopener noreferrer' : undefined}
             >
@@ -60,7 +60,7 @@ const navItems = [
         <!-- Contact CTA -->
         <a 
           href="mailto:team@horizonevents.info"
-          class="px-4 py-2 text-orange-500 border border-orange-500 hover:bg-orange-500 hover:text-white transition-all duration-200 text-sm font-medium"
+          class="px-4 py-2 text-orange-300 border border-orange-300/50 hover:bg-orange-300/10 hover:border-orange-300 transition-all duration-200 text-sm font-medium rounded-lg"
         >
           Contact Us
         </a>
@@ -88,7 +88,7 @@ const navItems = [
               {item.dropdown.map((subItem) => (
                 <a 
                   href={subItem.href}
-                  class="block pl-4 py-2 text-slate-200 hover:text-orange-400 transition-colors"
+                  class="block pl-4 py-2 text-slate-300 hover:text-orange-300 transition-colors"
                 >
                   {subItem.label}
                 </a>
@@ -97,7 +97,7 @@ const navItems = [
           ) : (
             <a 
               href={item.href} 
-              class="text-slate-200 hover:text-orange-400 transition-colors"
+              class="text-slate-300 hover:text-orange-300 transition-colors"
               target={item.external ? '_blank' : undefined}
               rel={item.external ? 'noopener noreferrer' : undefined}
             >
@@ -108,7 +108,7 @@ const navItems = [
         
         <a 
           href="mailto:team@horizonevents.info"
-          class="inline-block px-4 py-2 bg-orange-500 text-white rounded-lg hover:bg-orange-600 transition-colors font-medium text-center mt-2"
+          class="inline-block px-4 py-2 bg-orange-300 text-white rounded-lg hover:bg-orange-400 transition-colors font-medium text-center mt-2"
         >
           Contact Us
         </a>

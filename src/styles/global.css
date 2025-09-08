@@ -2,14 +2,14 @@
 
 @layer base {
   :root {
-    --color-primary: 255 122 26; /* Orange #ff7a1a */
-    --color-dark-bg: 0 0 0; /* Pure black */
-    --color-dark-surface: 15 15 15; /* Near black */
-    --color-gray-dark: 31 31 31; /* Dark gray */
-    --color-gray-medium: 64 64 64; /* Medium gray */
-    --color-accent: rgb(255, 102, 26); /* Professional orange */
-    --color-text-primary: 255 255 255;
-    --color-text-secondary: 180 180 180;
+    --color-primary: 255 140 90; /* Soft coral #ff8c5a */
+    --color-dark-bg: 24 26 32; /* Soft charcoal */
+    --color-dark-surface: 32 35 42; /* Gentle dark */
+    --color-gray-dark: 45 48 58; /* Muted dark gray */
+    --color-gray-medium: 100 105 115; /* Soft medium gray */
+    --color-accent: rgb(255, 140, 90); /* Soft coral */
+    --color-text-primary: 245 245 248; /* Soft white */
+    --color-text-secondary: 160 165 175; /* Gentle gray */
   }
 
   html {
@@ -17,7 +17,9 @@
   }
 
   body {
-    @apply bg-black text-gray-100 antialiased;
+    @apply antialiased;
+    background: rgb(24, 26, 32);
+    color: rgb(245, 245, 248);
     font-family: 'Inter', system-ui, -apple-system, sans-serif;
     letter-spacing: -0.01em;
   }
@@ -31,12 +33,15 @@
   }
 
   ::selection {
-    @apply bg-orange-500/30 text-white;
+    background: rgba(255, 140, 90, 0.2);
+    color: rgb(255, 140, 90);
   }
 
   /* Focus styles */
   *:focus-visible {
-    @apply outline-none ring-2 ring-orange-500 ring-offset-2 ring-offset-black;
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(255, 140, 90, 0.4);
+    border-radius: 4px;
   }
 
   /* Reduced motion */
@@ -51,12 +56,12 @@
 
 @layer components {
   .gradient-bg {
-    background: linear-gradient(180deg, rgb(31, 31, 31) 0%, rgb(15, 15, 15) 100%);
+    background: linear-gradient(180deg, rgb(32, 35, 42) 0%, rgb(24, 26, 32) 100%);
   }
 
   .gradient-text {
     @apply bg-clip-text text-transparent;
-    background: linear-gradient(135deg, var(--color-accent) 0%, rgb(255, 140, 26) 100%);
+    background: linear-gradient(135deg, rgb(255, 140, 90) 0%, rgb(255, 170, 120) 100%);
   }
 
   .card-hover {
